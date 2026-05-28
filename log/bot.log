@@ -1,0 +1,24 @@
+[2026-05-28 07:39:12 PM - bot - ERROR] Peer id invalid: -1003948760893
+Traceback (most recent call last):
+  File "C:\Users\navof\AppData\Local\Programs\Python\Python313\Lib\site-packages\pyrogram\methods\advanced\resolve_peer.py", line 62, in resolve_peer
+    return await self.storage.get_peer_by_id(peer_id)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\navof\AppData\Local\Programs\Python\Python313\Lib\site-packages\pyrogram\storage\sqlite_storage.py", line 142, in get_peer_by_id
+    raise KeyError(f"ID not found: {peer_id}")
+KeyError: 'ID not found: -1003948760893'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\navof\Documents\forward_bot-main\bot\plugins\copy_plug.py", line 21, in copy
+    to_chat_name = (await app.get_chat(to_chat)).title
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\navof\AppData\Local\Programs\Python\Python313\Lib\site-packages\pyrogram\methods\chats\get_chat.py", line 78, in get_chat
+    peer = await self.resolve_peer(chat_id)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\navof\AppData\Local\Programs\Python\Python313\Lib\site-packages\pyrogram\methods\advanced\resolve_peer.py", line 89, in resolve_peer
+    peer_type = utils.get_peer_type(peer_id)
+  File "C:\Users\navof\AppData\Local\Programs\Python\Python313\Lib\site-packages\pyrogram\utils.py", line 246, in get_peer_type
+    raise ValueError(f"Peer id invalid: {peer_id}")
+ValueError: Peer id invalid: -1003948760893
+[2026-05-28 07:42:15 PM - bot - INFO] Starting copy from -1001574099841 -> -1003948760893
